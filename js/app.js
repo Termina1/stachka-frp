@@ -18,6 +18,7 @@ import { reduxReactRouter, routerStateReducer } from 'redux-router';
 import thunk from 'redux-thunk';
 import FontFaceObserver from 'fontfaceobserver';
 import { createHistory } from 'history';
+import DevTools from "./components/devtools";
 
 // Observer loading of Open Sans (to remove open sans, remove the <link> tag in the index.html file and this observer)
 const openSansObserver = new FontFaceObserver('Open Sans', {});
@@ -28,7 +29,7 @@ import NotFoundPage from './components/NotFound.react';
 import App from './components/App.react';
 
 // Import the CSS file, which HtmlWebpackPlugin transfers to the build folder
-import 'shower-ribbon/styles/screen-16x10.css';
+import 'shower-ribbon/styles/screen-4x3.css';
 import '../css/main.css';
 
 // Create the store with the redux-thunk middleware, which allows us
@@ -42,6 +43,7 @@ const routes = <Router history={createHistory()}>
 </Router>;
 
 const createStoreWithMiddleware = compose(
+  DevTools.instrument(),
   applyMiddleware(thunk),
   reduxReactRouter({
     routes,

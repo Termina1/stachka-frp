@@ -19,9 +19,13 @@
   color: white;
 }
 
+.slide pre {
+  overflow: hidden !important;
+}
+
 
 .slide.full {
-  padding: 20px 0px;
+  padding: 50px 0 0 0;
 }
 
 .slide.center {
@@ -76,6 +80,19 @@
 
 .sparse-item::before {
   opacity: 0;
+}
+
+.slide p.clock {
+  font-size: 70px;
+  margin-bottom: 0px;
+}
+
+.slide li {
+  font-size: 38px;
+}
+
+#app > div > div:last-of-type > div {
+  background: black !important;
 }
 
 h2.shout.smaller {

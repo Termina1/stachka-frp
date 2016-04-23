@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {changeActiveSlide, changeMode} from "../actions/AppActions";
+import DevTools from './devtools';
 
 export default class Slide extends Component {
 
