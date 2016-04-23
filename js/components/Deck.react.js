@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 ;import {changeActiveSlide, changeMode} from "../actions/AppActions";
 import { connect } from 'react-redux';
 
-const PREV_KEYS = [37, 38];
-const NEXT_KEYS = [39, 40];
+const PREV_KEYS = [37, 38, 33];
+const NEXT_KEYS = [39, 40, 34];
 const ESC = 27;
 const ENTER = 13;
 
